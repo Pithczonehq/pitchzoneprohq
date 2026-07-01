@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PitchZone – Best Bonuses</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .bm-hero {
+      background: #111827;
+      padding: 36px 0 24px;
+    }
+    .bm-hero h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .bm-hero p {
+      font-size: 15px;
+      color: #9ca3af;
+    }
+
+    .bm-body {
+      background: #f3f4f6;
+      padding: 24px 0 48px;
+    }
+
+    .bm-listing {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bm-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .bm-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,.11); transform: translateY(-1px); }
+
+    .bm-item .bk-logo { flex-shrink: 0; width: 90px; height: 38px; font-size: 13px; }
+
+    .bm-mid {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .bm-stat { display: flex; flex-direction: column; gap: 2px; }
+    .bm-stat .val { font-size: 20px; font-weight: 800; color: #22c55e; }
+    .bm-stat .lbl { font-size: 11px; color: #6b7280; }
+    .bm-stat .type { font-size: 13px; font-weight: 600; color: #111; }
+
+    .sep { width: 1px; height: 36px; background: #e5e7eb; flex-shrink: 0; }
+
+    .bm-actions { flex-shrink: 0; }
+
+    @media (max-width: 640px) {
+      .bm-mid { gap: 12px; }
+      .sep { display: none; }
+      .bm-item .bk-logo { width: 72px; height: 32px; font-size: 11px; }
+      .bm-stat .val { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Pitch<span>Zone</span></a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="bookmakers.html" class="nav-link">Bookmakers</a>
+        <a href="bonuses.html" class="nav-link active">Bonuses</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="bookmakers.html" class="btn btn-primary desktop-cta">Compare Bookmakers</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="bookmakers.html">Bookmakers</a>
+      <a href="bonuses.html">Bonuses</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="bm-hero">
+    <div class="container">
+      <h1>Best Bonuses</h1>
+      <p>Exclusive welcome offers and promotions from top bookmakers.</p>
+    </div>
+  </section>
+
+  <!-- ===== LISTING ===== -->
+  <section class="bm-body">
+    <div class="container">
+      <div class="bm-listing">
+
+        <div class="bm-item">
+          <div class="bk-rank gold">1</div>
+          <div class="bk-logo bcgame">BC.GAME</div>
+          <div class="bm-mid">
+            <div class="bm-stat">
+              <div class="val">€500</div>
+              <div class="lbl">Bonus Amount</div>
+            </div>
+            <div class="sep"></div>
+            <div class="bm-stat">
+              <div class="type">Welcome Bonus</div>
+              <div class="lbl">New customers only</div>
+            </div>
+          </div>
+          <div class="bm-actions">
+            <a href="#" class="btn btn-primary btn-sm">Claim ↗</a>
+          </div>
+        </div>
+
+        <div class="bm-item">
+          <div class="bk-rank silver">2</div>
+          <div class="bk-logo oneXbet">1XBET</div>
+          <div class="bm-mid">
+            <div class="bm-stat">
+              <div class="val">€130</div>
+              <div class="lbl">Bonus Amount</div>
+            </div>
+            <div class="sep"></div>
+            <div class="bm-stat">
+              <div class="type">Welcome Bonus</div>
+              <div class="lbl">New customers only</div>
+            </div>
+          </div>
+          <div class="bm-actions">
+            <a href="#" class="btn btn-primary btn-sm">Claim ↗</a>
+          </div>
+        </div>
+
+        <div class="bm-item">
+          <div class="bk-rank bronze">3</div>
+          <div class="bk-logo bet365">bet<span>365</span></div>
+          <div class="bm-mid">
+            <div class="bm-stat">
+              <div class="val">€100</div>
+              <div class="lbl">Bonus Amount</div>
+            </div>
+            <div class="sep"></div>
+            <div class="bm-stat">
+              <div class="type">Welcome Bonus</div>
+              <div class="lbl">New customers only</div>
+            </div>
+          </div>
+          <div class="bm-actions">
+            <a href="#" class="btn btn-primary btn-sm">Claim ↗</a>
+          </div>
+        </div>
+
+        <div class="bm-item">
+          <div class="bk-rank">4</div>
+          <div class="bk-logo betano">Betano</div>
+          <div class="bm-mid">
+            <div class="bm-stat">
+              <div class="val">€50</div>
+              <div class="lbl">Bonus Amount</div>
+            </div>
+            <div class="sep"></div>
+            <div class="bm-stat">
+              <div class="type">Sports Bonus</div>
+              <div class="lbl">New customers only</div>
+            </div>
+          </div>
+          <div class="bm-actions">
+            <a href="#" class="btn btn-primary btn-sm">Claim ↗</a>
+          </div>
+        </div>
+
+        <div class="bm-item">
+          <div class="bk-rank">5</div>
+          <div class="bk-logo unibet">UNIBET</div>
+          <div class="bm-mid">
+            <div class="bm-stat">
+              <div class="val">€40</div>
+              <div class="lbl">Bonus Amount</div>
+            </div>
+            <div class="sep"></div>
+            <div class="bm-stat">
+              <div class="type">Welcome Bonus</div>
+              <div class="lbl">New customers only</div>
+            </div>
+          </div>
+          <div class="bm-actions">
+            <a href="#" class="btn btn-primary btn-sm">Claim ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Pitch<span>Zone</span></a>
+        <p>Your trusted source for bookmaker reviews, bonuses and betting news.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.505c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.462c.537-.194 1.006.131.881.717z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723 9.91 9.91 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.641 3.16a4.916 4.916 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616v.061a4.917 4.917 0 0 0 3.946 4.827 4.936 4.936 0 0 1-2.224.084 4.918 4.918 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.015-.637A10.012 10.012 0 0 0 24 4.59l-.046-.021z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.013 3.584-.07 4.85c-.053 1.17-.249 1.805-.413 2.227a3.705 3.705 0 0 1-.896 1.382 3.705 3.705 0 0 1-1.382.896c-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.013-4.85-.07c-1.17-.053-1.805-.249-2.227-.413a3.705 3.705 0 0 1-1.382-.896 3.705 3.705 0 0 1-.896-1.382c-.164-.422-.36-1.057-.413-2.227C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.053-1.17.249-1.805.413-2.227a3.705 3.705 0 0 1 .896-1.382 3.705 3.705 0 0 1 1.382-.896c.422-.164 1.057-.36 2.227-.413C8.416 2.175 8.796 2.163 12 2.163zm0-2.163c-3.259 0-3.667.014-4.947.072C5.771.131 4.903.333 4.14.63a5.869 5.869 0 0 0-2.126 1.384A5.869 5.869 0 0 0 .63 4.14C.333 4.903.131 5.771.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.667.072 4.947.059 1.282.261 2.15.558 2.913.306.789.715 1.457 1.384 2.126A5.869 5.869 0 0 0 4.14 23.37c.763.297 1.631.499 2.913.558C8.333 23.986 8.741 24 12 24c3.259 0 3.667-.014 4.947-.072 1.282-.059 2.15-.261 2.913-.558a5.869 5.869 0 0 0 2.126-1.384 5.869 5.869 0 0 0 1.384-2.126c.297-.763.499-1.631.558-2.913C23.986 15.667 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947-.059-1.282-.261-2.15-.558-2.913a5.869 5.869 0 0 0-1.384-2.126A5.869 5.869 0 0 0 19.86.63c-.763-.297-1.631-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="bookmakers.html">Bookmakers</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-responsible">
+        <div class="responsible-badge">
+          <span class="badge-18">18+</span>
+          <span>Play Responsibly</span>
+        </div>
+        <div class="gamble-aware">
+          <span>GambleAware</span>
+          <span>BeGambleAware.org</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PitchZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

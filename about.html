@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PitchZone – About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .bm-hero {
+      background: #111827;
+      padding: 36px 0 24px;
+    }
+    .bm-hero h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .bm-hero p {
+      font-size: 15px;
+      color: #9ca3af;
+    }
+
+    .about-body {
+      background: #f3f4f6;
+      padding: 32px 0 56px;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .about-grid { grid-template-columns: 2fr 1fr; gap: 28px; }
+    }
+
+    .about-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
+    .about-card h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .about-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+      margin: 20px 0 8px;
+    }
+    .about-card p {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .criteria-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .criteria-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      background: #f9fafb;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+    .criteria-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .criteria-item strong {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .criteria-item span {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .responsible-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+      border-top: 4px solid #22c55e;
+    }
+    .responsible-card h2 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .responsible-card p {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .helpline {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 14px;
+    }
+    .helpline strong {
+      font-size: 13px;
+      font-weight: 700;
+      color: #15803d;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .helpline a {
+      font-size: 13px;
+      color: #22c55e;
+      font-weight: 600;
+    }
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .age-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      color: #22c55e;
+    }
+    .badge-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .affiliate-note {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 20px;
+    }
+    .affiliate-note p {
+      font-size: 12px;
+      color: #92400e;
+      margin: 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Pitch<span>Zone</span></a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="bookmakers.html" class="nav-link">Bookmakers</a>
+        <a href="bonuses.html" class="nav-link">Bonuses</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="about.html" class="nav-link active">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="bookmakers.html" class="btn btn-primary desktop-cta">Compare Bookmakers</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="bookmakers.html">Bookmakers</a>
+      <a href="bonuses.html">Bonuses</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="bm-hero">
+    <div class="container">
+      <h1>About PitchZone</h1>
+      <p>Your trusted source for honest bookmaker reviews and betting offers.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT ===== -->
+  <section class="about-body">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left column -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+          <div class="about-card">
+            <h2>Who We Are</h2>
+            <p>PitchZone is an independent comparison platform dedicated to helping bettors find the best bookmakers, bonuses, and betting offers available online.</p>
+            <p>We review and compare online sportsbooks based on the factors that matter most, including odds quality, welcome bonuses, payout speed, security, mobile experience, and customer support.</p>
+            <p>Our goal is simple: to provide honest, up-to-date, and unbiased information so you can choose the bookmaker that best fits your betting needs with confidence</p>
+          </div>
+
+          <div class="about-card">
+            <h2>How We Rate Bookmakers</h2>
+            <p>Every bookmaker on PitchZone is evaluated across six key criteria:</p>
+            <div class="criteria-list">
+
+              <div class="criteria-item">
+                <div class="criteria-icon" style="background:#dbeafe;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <div>
+                  <strong>Payout Speed</strong>
+                  <span>We test withdrawal times across multiple payment methods.</span>
+                </div>
+              </div>
+              <div class="criteria-item">
+                <div class="criteria-icon" style="background:#fef9c3;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <strong>Odds Quality</strong>
+                  <span>We compare odds margins across major sports markets.</span>
+                </div>
+              </div>
+              <div class="criteria-item">
+                <div class="criteria-icon" style="background:#fce7f3;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+                </div>
+                <div>
+                  <strong>Bonuses & Promotions</strong>
+                  <span>We evaluate welcome offers, wagering requirements, and ongoing promos.</span>
+                </div>
+              </div>
+              <div class="criteria-item">
+                <div class="criteria-icon" style="background:#ede9fe;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+                </div>
+                <div>
+                  <strong>Mobile Experience</strong>
+                  <span>App quality, mobile site performance, and usability tested.</span>
+                </div>
+              </div>
+              <div class="criteria-item">
+                <div class="criteria-icon" style="background:#ffedd5;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div>
+                  <strong>Customer Support</strong>
+                  <span>Live chat, email response times, and support quality evaluated.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- Right column -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+
+          <div class="responsible-card">
+            <h2>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Responsible Gambling
+            </h2>
+            <p>Gambling should always be fun and entertaining — never a way to make money or solve financial problems.</p>
+            <p>PitchZone is committed to promoting safe gambling. We encourage all users to:</p>
+            <p>✔ Set deposit and loss limits<br>
+               ✔ Never chase losses<br>
+               ✔ Take regular breaks<br>
+               ✔ Only bet what you can afford to lose</p>
+            <p>If you or someone you know is struggling with gambling, free help is available.</p>
+            <div class="helpline">
+              <strong>🇬🇧 UK — Free Support</strong>
+              <a href="https://www.begambleaware.org" target="_blank">BeGambleAware.org</a><br>
+              <a href="tel:08088020133">0808 8020 133</a> (free, 24/7)
+            </div>
+            <div class="badge-row">
+              <div class="age-badge">18+</div>
+              <div class="badge-text">You must be 18 or over to bet. Please gamble responsibly.</div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h2>Contact Us</h2>
+            <p>Have a question, suggestion, or want to report an issue?</p>
+            <p>📧 <a href="mailto:hello@pitchzone.com" style="color:#22c55e;font-weight:600;">hello@pitchzone.com</a></p>
+            <p style="margin-top:8px;">We typically respond within 24 hours.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Pitch<span>Zone</span></a>
+        <p>Your trusted source for bookmaker reviews, bonuses and betting news.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.505c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.462c.537-.194 1.006.131.881.717z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723 9.91 9.91 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.641 3.16a4.916 4.916 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616v.061a4.917 4.917 0 0 0 3.946 4.827 4.936 4.936 0 0 1-2.224.084 4.918 4.918 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.015-.637A10.012 10.012 0 0 0 24 4.59l-.046-.021z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.013 3.584-.07 4.85c-.053 1.17-.249 1.805-.413 2.227a3.705 3.705 0 0 1-.896 1.382 3.705 3.705 0 0 1-1.382.896c-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.013-4.85-.07c-1.17-.053-1.805-.249-2.227-.413a3.705 3.705 0 0 1-1.382-.896 3.705 3.705 0 0 1-.896-1.382c-.164-.422-.36-1.057-.413-2.227C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.053-1.17.249-1.805.413-2.227a3.705 3.705 0 0 1 .896-1.382 3.705 3.705 0 0 1 1.382-.896c.422-.164 1.057-.36 2.227-.413C8.416 2.175 8.796 2.163 12 2.163zm0-2.163c-3.259 0-3.667.014-4.947.072C5.771.131 4.903.333 4.14.63a5.869 5.869 0 0 0-2.126 1.384A5.869 5.869 0 0 0 .63 4.14C.333 4.903.131 5.771.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.667.072 4.947.059 1.282.261 2.15.558 2.913.306.789.715 1.457 1.384 2.126A5.869 5.869 0 0 0 4.14 23.37c.763.297 1.631.499 2.913.558C8.333 23.986 8.741 24 12 24c3.259 0 3.667-.014 4.947-.072 1.282-.059 2.15-.261 2.913-.558a5.869 5.869 0 0 0 2.126-1.384 5.869 5.869 0 0 0 1.384-2.126c.297-.763.499-1.631.558-2.913C23.986 15.667 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947-.059-1.282-.261-2.15-.558-2.913a5.869 5.869 0 0 0-1.384-2.126A5.869 5.869 0 0 0 19.86.63c-.763-.297-1.631-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="bookmakers.html">Bookmakers</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+      <div class="footer-responsible">
+        <div class="responsible-badge">
+          <span class="badge-18">18+</span>
+          <span>Play Responsibly</span>
+        </div>
+        <div class="gamble-aware">
+          <span>GambleAware</span>
+          <span>BeGambleAware.org</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PitchZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

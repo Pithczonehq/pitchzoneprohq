@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PitchZone – Find Trusted Bookmakers & Betting Offers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Pitch<span>Zone</span></a>
+
+      <!-- Desktop nav -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="bookmakers.html" class="nav-link">Bookmakers</a>
+        <a href="bonuses.html" class="nav-link">Bonuses</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="bookmakers.html" class="btn btn-primary desktop-cta">Compare Bookmakers</a>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html"">Home</a>
+      <a href="bookmakers.html">Bookmakers</a>
+      <a href="bonuses.html">Bonuses</a>
+      <a href="news.html">News</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#22c55e"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          COMPARE. CHOOSE. WIN.
+        </p>
+        <h1>Find Trusted Bookmakers &amp; <span class="green">Betting Offers</span></h1>
+        <p class="hero-sub">Compare top bookmakers, discover bonuses and read honest reviews all in one place.</p>
+        <div class="hero-btns">
+          <a href="bookmakers.html" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            Compare Bookmakers
+          </a>
+          <a href="bonuses.html" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+            View Bonuses
+          </a>
+        </div>
+        <div class="hero-trust desktop-only">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Trusted Reviews</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg> Best Bonuses</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Fast Payouts</span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Secure &amp; Safe</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="Football player kicking" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOP BOOKMAKERS ===== -->
+  <section class="section bookmakers-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Top Bookmakers</h2>
+        <a href="bookmakers.html" class="view-all">View all bookmakers <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Desktop: card row -->
+      <div class="bk-cards desktop-only">
+        <div class="bk-card">
+          <div class="bk-rank gold">1</div>
+          <div class="bk-logo bet365">bet<span>365</span></div>
+          <div class="bk-rating"><span class="star">★</span> 9.5/10 <span class="label green">Excellent</span></div>
+          <div class="bk-bonus-label">Welcome Bonus</div>
+          <div class="bk-bonus">€100</div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site ↗</a>
+          <a href="#" class="bk-review">Review →</a>
+        </div>
+        <div class="bk-card">
+          <div class="bk-rank silver">2</div>
+          <div class="bk-logo betano">Betano</div>
+          <div class="bk-rating"><span class="star">★</span> 9.3/10 <span class="label green">Excellent</span></div>
+          <div class="bk-bonus-label">Welcome Bonus</div>
+          <div class="bk-bonus">€50</div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site ↗</a>
+          <a href="#" class="bk-review">Review →</a>
+        </div>
+        <div class="bk-card">
+          <div class="bk-rank bronze">3</div>
+          <div class="bk-logo oneXbet">1XBET</div>
+          <div class="bk-rating"><span class="star">★</span> 9.0/10 <span class="label green">Very Good</span></div>
+          <div class="bk-bonus-label">Welcome Bonus</div>
+          <div class="bk-bonus">€130</div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site ↗</a>
+          <a href="#" class="bk-review">Review →</a>
+        </div>
+        <div class="bk-card">
+          <div class="bk-rank">4</div>
+          <div class="bk-logo unibet">UNIBET</div>
+          <div class="bk-rating"><span class="star">★</span> 8.9/10 <span class="label green">Very Good</span></div>
+          <div class="bk-bonus-label">Welcome Bonus</div>
+          <div class="bk-bonus">€40</div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site ↗</a>
+          <a href="#" class="bk-review">Review →</a>
+        </div>
+        <div class="bk-card">
+          <div class="bk-rank">5</div>
+          <div class="bk-logo bcgame">BC.GAME</div>
+          <div class="bk-rating"><span class="star">★</span> 8.8/10 <span class="label green">Very Good</span></div>
+          <div class="bk-bonus-label">Welcome Bonus</div>
+          <div class="bk-bonus">€500</div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site ↗</a>
+          <a href="#" class="bk-review">Review →</a>
+        </div>
+      </div>
+
+      <!-- Mobile: list rows -->
+      <div class="bk-list mobile-only">
+        <div class="bk-row">
+          <div class="bk-rank gold">1</div>
+          <div class="bk-logo bet365">bet<span>365</span></div>
+          <div class="bk-info">
+            <div class="bk-rating"><span class="star">★</span> 9.5/10 <span class="label green">Excellent</span></div>
+            <div class="bk-bonus green">€100 <span class="bonus-text">Bonus</span></div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bk-row">
+          <div class="bk-rank silver">2</div>
+          <div class="bk-logo betano">Betano</div>
+          <div class="bk-info">
+            <div class="bk-rating"><span class="star">★</span> 9.3/10 <span class="label green">Excellent</span></div>
+            <div class="bk-bonus green">€50 <span class="bonus-text">Bonus</span></div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bk-row">
+          <div class="bk-rank bronze">3</div>
+          <div class="bk-logo oneXbet">1XBET</div>
+          <div class="bk-info">
+            <div class="bk-rating"><span class="star">★</span> 9.0/10 <span class="label green">Very Good</span></div>
+            <div class="bk-bonus green">€130 <span class="bonus-text">Bonus</span></div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bk-row">
+          <div class="bk-rank">4</div>
+          <div class="bk-logo unibet">UNIBET</div>
+          <div class="bk-info">
+            <div class="bk-rating"><span class="star">★</span> 8.9/10 <span class="label green">Very Good</span></div>
+            <div class="bk-bonus green">€40 <span class="bonus-text">Bonus</span></div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="bk-row">
+          <div class="bk-rank">5</div>
+          <div class="bk-logo bcgame">BC.GAME</div>
+          <div class="bk-info">
+            <div class="bk-rating"><span class="star">★</span> 8.8/10 <span class="label green">Very Good</span></div>
+            <div class="bk-bonus green">€500 <span class="bonus-text">Bonus</span></div>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Visit Site <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 FEATURE COLUMNS (desktop) / stacked cards (mobile) ===== -->
+  <section class="section features-section">
+    <div class="container features-grid desktop-only">
+
+      <!-- Best Bonuses -->
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon bonus-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <div>
+            <h3>Best Bonuses</h3>
+          </div>
+          <a href="bonuses.html" class="view-all">View all →</a>
+        </div>
+        <div class="feature-rows">
+          <div class="feature-row">
+            <div class="bk-logo bcgame small">BC.GAME</div>
+            <span class="feature-desc">€500 Welcome Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo bet365 small">bet<span>365</span></div>
+            <span class="feature-desc">€100 New Customer Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo betano small">Betano</div>
+            <span class="feature-desc">€50 Sports Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+        </div>
+        <a href="bonuses.html" class="feature-see-all">See all bonuses →</a>
+      </div>
+
+      <!-- Fast Payouts -->
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon payout-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <h3>Fast Payouts</h3>
+          </div>
+          <a href="bookmakers.html#crypto" class="view-all">View all →</a>
+        </div>
+        <div class="feature-rows">
+          <div class="feature-row">
+            <div class="bk-logo betano small">Betano</div>
+            <span class="feature-desc">Avg 10 Min Payouts</span>
+            <span class="speed-badge fast">Fast</span>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo bcgame small">BC.GAME</div>
+            <span class="feature-desc">Avg 15 Min Payouts</span>
+            <span class="speed-badge fast">Fast</span>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo unibet small">UNIBET</div>
+            <span class="feature-desc">Avg 30 Min Payouts</span>
+            <span class="speed-badge vfast">Very Fast</span>
+          </div>
+        </div>
+        <a href="bookmakers.html#crypto" class="feature-see-all">See all fast payouts →</a>
+      </div>
+
+      <!-- Latest News -->
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon news-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div>
+            <h3>Latest News</h3>
+          </div>
+          <a href="news.html" class="view-all">View all →</a>
+        </div>
+        <div class="news-rows">
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">Best Sportsbooks in 2026</p>
+              <p class="news-date">May 23, 2026</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">New Bonus Offers This Week</p>
+              <p class="news-date">May 22, 2026</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">Responsible Gaming: Tips &amp; Advice</p>
+              <p class="news-date">May 21, 2026</p>
+            </div>
+          </div>
+        </div>
+        <a href="news.html" class="feature-see-all purple">Read all news →</a>
+      </div>
+
+    </div>
+
+    <!-- Mobile accordion listing cards -->
+    <div class="container mob-accordions mobile-only">
+
+      <!-- Best Bonuses -->
+      <div class="mob-accordion">
+        <button class="mob-acc-header" onclick="toggleAcc(this)">
+          <div class="mob-acc-title">
+            <div class="feature-icon bonus-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+            </div>
+            <span>Best Bonuses</span>
+          </div>
+          <svg class="acc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mob-acc-body open">
+          <div class="feature-row">
+            <div class="bk-logo bcgame small">BC.GAME</div>
+            <span class="feature-desc">€500 Welcome Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo bet365 small">bet<span>365</span></div>
+            <span class="feature-desc">€100 New Customer Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo betano small">Betano</div>
+            <span class="feature-desc">€50 Sports Bonus</span>
+            <a href="#" class="btn btn-primary btn-xs">Claim</a>
+          </div>
+          <a href="bonuses.html" class="feature-see-all">See all bonuses →</a>
+        </div>
+      </div>
+
+      <!-- Fast Payouts -->
+      <div class="mob-accordion">
+        <button class="mob-acc-header" onclick="toggleAcc(this)">
+          <div class="mob-acc-title">
+            <div class="feature-icon payout-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span>Fast Payouts</span>
+          </div>
+          <svg class="acc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mob-acc-body">
+          <div class="feature-row">
+            <div class="bk-logo betano small">Betano</div>
+            <span class="feature-desc">Avg 10 Min Payouts</span>
+            <span class="speed-badge fast">Fast</span>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo bcgame small">BC.GAME</div>
+            <span class="feature-desc">Avg 15 Min Payouts</span>
+            <span class="speed-badge fast">Fast</span>
+          </div>
+          <div class="feature-row">
+            <div class="bk-logo unibet small">UNIBET</div>
+            <span class="feature-desc">Avg 30 Min Payouts</span>
+            <span class="speed-badge vfast">Very Fast</span>
+          </div>
+          <a href="bookmakers.html#crypto" class="feature-see-all">See all fast payouts →</a>
+        </div>
+      </div>
+
+      <!-- Latest News -->
+      <div class="mob-accordion">
+        <button class="mob-acc-header" onclick="toggleAcc(this)">
+          <div class="mob-acc-title">
+            <div class="feature-icon news-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <span>Latest News</span>
+          </div>
+          <svg class="acc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mob-acc-body">
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">Best Sportsbooks in 2026</p>
+              <p class="news-date">May 23, 2026</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">New Bonus Offers This Week</p>
+              <p class="news-date">May 22, 2026</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-thumb"></div>
+            <div>
+              <p class="news-title">Responsible Gaming: Tips &amp; Advice</p>
+              <p class="news-date">May 21, 2026</p>
+            </div>
+          </div>
+          <a href="news.html" class="feature-see-all purple">Read all news →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Pitch<span>Zone</span></a>
+        <p>Your trusted source for bookmaker reviews, bonuses and betting news.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.018 9.505c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.462c.537-.194 1.006.131.881.717z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723 9.91 9.91 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.641 3.16a4.916 4.916 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616v.061a4.917 4.917 0 0 0 3.946 4.827 4.936 4.936 0 0 1-2.224.084 4.918 4.918 0 0 0 4.6 3.42A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.015-.637A10.012 10.012 0 0 0 24 4.59l-.046-.021z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.013 3.584-.07 4.85c-.053 1.17-.249 1.805-.413 2.227a3.705 3.705 0 0 1-.896 1.382 3.705 3.705 0 0 1-1.382.896c-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.013-4.85-.07c-1.17-.053-1.805-.249-2.227-.413a3.705 3.705 0 0 1-1.382-.896 3.705 3.705 0 0 1-.896-1.382c-.164-.422-.36-1.057-.413-2.227C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.053-1.17.249-1.805.413-2.227a3.705 3.705 0 0 1 .896-1.382 3.705 3.705 0 0 1 1.382-.896c.422-.164 1.057-.36 2.227-.413C8.416 2.175 8.796 2.163 12 2.163zm0-2.163c-3.259 0-3.667.014-4.947.072C5.771.131 4.903.333 4.14.63a5.869 5.869 0 0 0-2.126 1.384A5.869 5.869 0 0 0 .63 4.14C.333 4.903.131 5.771.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.667.072 4.947.059 1.282.261 2.15.558 2.913.306.789.715 1.457 1.384 2.126A5.869 5.869 0 0 0 4.14 23.37c.763.297 1.631.499 2.913.558C8.333 23.986 8.741 24 12 24c3.259 0 3.667-.014 4.947-.072 1.282-.059 2.15-.261 2.913-.558a5.869 5.869 0 0 0 2.126-1.384 5.869 5.869 0 0 0 1.384-2.126c.297-.763.499-1.631.558-2.913C23.986 15.667 24 15.259 24 12c0-3.259-.014-3.667-.072-4.947-.059-1.282-.261-2.15-.558-2.913a5.869 5.869 0 0 0-1.384-2.126A5.869 5.869 0 0 0 19.86.63c-.763-.297-1.631-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="bookmakers.html">Bookmakers</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+
+      <div class="footer-responsible">
+        <div class="responsible-badge">
+          <span class="badge-18">18+</span>
+          <span>Play Responsibly</span>
+        </div>
+        <div class="gamble-aware">
+          <span>GambleAware</span>
+          <span>BeGambleAware.org</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 PitchZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleAcc(btn) {
+      const body = btn.nextElementSibling;
+      const arrow = btn.querySelector('.acc-arrow');
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

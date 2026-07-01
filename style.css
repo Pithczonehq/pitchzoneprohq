@@ -1,0 +1,569 @@
+/* ====================================================
+   PitchZone – style.css
+   Mobile-first, responsive up to desktop
+   ==================================================== */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:      #22c55e;
+  --green-dark: #16a34a;
+  --blue:       #3b82f6;
+  --purple:     #8b5cf6;
+  --gold:       #f59e0b;
+  --silver:     #94a3b8;
+  --bronze:     #cd7c3b;
+  --black:      #0a0a0a;
+  --surface:    #111827;
+  --card:       #ffffff;
+  --border:     #e5e7eb;
+  --text:       #111827;
+  --muted:      #6b7280;
+  --radius:     10px;
+  --font:       'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--text);
+  background: #f9fafb;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+a  { text-decoration: none; color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.green  { color: var(--green); }
+.purple { color: var(--purple); }
+
+/* ---------- Visibility helpers ---------- */
+.desktop-only { display: none; }
+.mobile-only  { display: block; }
+
+@media (min-width: 900px) {
+  .desktop-only { display: flex; }
+  .desktop-only.features-grid { display: grid; }
+  .mobile-only  { display: none !important; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: filter .15s, background .15s;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-outline {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.btn-outline:hover { background: rgba(255,255,255,.1); }
+.btn-sm  { padding: 8px 14px; font-size: 13px; border-radius: 7px; }
+.btn-xs  { padding: 5px 12px; font-size: 12px; border-radius: 6px; }
+
+/* ---------- HEADER ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0a0f0a;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.5px;
+}
+.logo span { color: var(--green); }
+
+.desktop-nav { display: none; }
+@media (min-width: 900px) {
+  .desktop-nav {
+    display: flex;
+    gap: 28px;
+  }
+}
+.nav-link {
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav-link:hover, .nav-link.active {
+  color: #fff;
+  border-bottom-color: var(--green);
+}
+
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.icon-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: color .15s;
+}
+.icon-btn:hover { color: #fff; }
+.desktop-cta { display: none; }
+@media (min-width: 900px) {
+  .desktop-cta { display: inline-flex; }
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 900px) { .hamburger { display: none; } }
+
+/* Mobile nav dropdown */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  padding: 14px 20px;
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: color .15s, background .15s;
+}
+.mobile-nav a:hover { color: var(--green); background: rgba(34,197,94,.06); }
+@media (min-width: 900px) { .mobile-nav { display: none !important; } }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0a0f0a 0%, #111827 60%, #0d1f0d 100%);
+  overflow: hidden;
+  min-height: 380px;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.85) 40%, rgba(0,0,0,.2) 100%);
+  z-index: 1;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hero-content { flex: 1; min-width: 0; }
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--green);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.hero-content h1 {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.hero-content h1 .green { color: var(--green); }
+.hero-sub {
+  font-size: 15px;
+  color: #9ca3af;
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.hero-trust {
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #9ca3af;
+}
+.hero-trust span { display: flex; align-items: center; gap: 5px; }
+
+.hero-image {
+  flex-shrink: 0;
+  width: 42%;
+  max-width: 440px;
+  display: none;
+}
+@media (min-width: 640px) { .hero-image { display: block; } }
+.hero-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: .9;
+}
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 40px 0; }
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.section-header h2 { font-size: 22px; font-weight: 800; }
+.view-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: gap .15s;
+}
+.view-all:hover { gap: 6px; }
+
+/* ---------- BOOKMAKERS – Mobile list ---------- */
+.bk-list { display: flex; flex-direction: column; gap: 10px; }
+.bk-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+}
+.bk-info { flex: 1; }
+.bk-rating {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+}
+.star { color: var(--gold); }
+.label { font-size: 12px; font-weight: 600; }
+.bk-bonus { font-size: 18px; font-weight: 800; color: var(--green); line-height: 1.2; }
+.bk-bonus .bonus-text { font-size: 12px; font-weight: 500; color: var(--green); }
+
+/* ---------- BOOKMAKERS – Desktop cards ---------- */
+.bk-cards {
+  gap: 14px;
+}
+.bk-card {
+  flex: 1;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 14px 16px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  position: relative;
+  transition: box-shadow .2s, transform .2s;
+}
+.bk-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.12); transform: translateY(-2px); }
+.bk-card .bk-rank { position: absolute; top: 10px; left: 10px; }
+.bk-card .bk-logo { margin-top: 10px; }
+.bk-card .bk-rating { flex-direction: column; gap: 2px; font-size: 14px; }
+.bk-card .bk-rating .label { font-size: 12px; }
+.bk-bonus-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.bk-card .bk-bonus { font-size: 26px; font-weight: 800; color: var(--green); }
+.bk-review { font-size: 12px; color: var(--muted); }
+.bk-review:hover { color: var(--green); }
+
+/* ---------- Rank badges ---------- */
+.bk-rank {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  background: #e5e7eb;
+  color: var(--text);
+}
+.bk-rank.gold   { background: var(--gold);   color: #fff; }
+.bk-rank.silver { background: var(--silver); color: #fff; }
+.bk-rank.bronze { background: var(--bronze); color: #fff; }
+
+/* ---------- Bookmaker logos (mock) ---------- */
+.bk-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 6px 12px;
+  min-width: 80px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.bk-logo.bet365  { background: #1a7a3d; color: #fff; }
+.bk-logo.bet365 span { color: var(--gold); }
+.bk-logo.betano  { background: #f15a22; color: #fff; font-style: italic; }
+.bk-logo.oneXbet { background: #002d62; color: #00a8ff; letter-spacing: -.5px; }
+.bk-logo.unibet  { background: #000; color: #fff; letter-spacing: 1px; font-size: 11px; }
+.bk-logo.bcgame  { background: #111; color: #4ade80; font-size: 12px; }
+
+.bk-logo.small { min-width: 60px; height: 28px; font-size: 11px; padding: 4px 8px; border-radius: 6px; }
+
+/* ---------- FEATURES (desktop 3-col / mobile cards) ---------- */
+.features-section { background: #fff; }
+.features-grid {
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.feature-card {
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.feature-header h3 { font-size: 16px; font-weight: 700; flex: 1; }
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bonus-icon  { background: #dcfce7; }
+.payout-icon { background: #dbeafe; }
+.news-icon   { background: #ede9fe; }
+
+.feature-rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.feature-desc { flex: 1; font-size: 13px; color: var(--muted); }
+.speed-badge { font-size: 12px; font-weight: 700; }
+.speed-badge.fast  { color: var(--green); }
+.speed-badge.vfast { color: var(--blue); }
+
+.feature-see-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+  display: block;
+  text-align: center;
+  padding-top: 4px;
+}
+.feature-see-all.purple { color: var(--purple); }
+
+/* News items */
+.news-rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.news-item { display: flex; align-items: center; gap: 10px; }
+.news-thumb {
+  width: 52px;
+  height: 40px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #22c55e22, #16a34a44);
+  flex-shrink: 0;
+}
+.news-title { font-size: 13px; font-weight: 600; color: var(--text); }
+.news-date  { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* Mobile accordion listings */
+.mob-accordions { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.mob-accordion {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.mob-acc-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+}
+.mob-acc-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.mob-acc-title .feature-icon { width: 34px; height: 34px; border-radius: 8px; }
+.acc-arrow { transition: transform .25s; flex-shrink: 0; }
+.mob-acc-body {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px 14px;
+}
+.mob-acc-body.open { display: flex; }
+.mob-acc-body .feature-row { background: #f9fafb; }
+.mob-acc-body .news-item { padding: 4px 0; }
+.mob-acc-body .feature-see-all { margin-top: 4px; }
+
+/* ---------- FOOTER ---------- */
+.site-footer { background: #0a0f0a; color: #9ca3af; margin-top: 0; }
+.footer-inner {
+  display: grid;
+  gap: 36px;
+  padding-top: 48px;
+  padding-bottom: 40px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .footer-inner { grid-template-columns: 2fr 2fr 1.2fr; gap: 48px; }
+}
+
+.footer-brand .logo { margin-bottom: 10px; }
+.footer-brand p { font-size: 13px; line-height: 1.6; max-width: 260px; margin-bottom: 16px; }
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a {
+  color: #6b7280;
+  transition: color .15s;
+}
+.footer-socials a:hover { color: var(--green); }
+
+.footer-links { display: flex; gap: 40px; }
+.footer-col { display: flex; flex-direction: column; gap: 10px; }
+.footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.footer-col a { font-size: 13px; transition: color .15s; }
+.footer-col a:hover { color: var(--green); }
+
+.footer-responsible { display: flex; flex-direction: column; gap: 12px; }
+.responsible-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+.badge-18 {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.gamble-aware {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.07);
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+/* ---------- Bookmakers section bg ---------- */
+.bookmakers-section { background: #f3f4f6; }
+
+/* ---------- Scroll reveal (lightweight) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .bk-card, .bk-row, .mob-feat-card, .feature-card {
+    animation: fadeUp .4s ease both;
+  }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
